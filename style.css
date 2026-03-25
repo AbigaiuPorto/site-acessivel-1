@@ -1,0 +1,143 @@
+/* Variáveis de Cores - Facilita a manutenção */
+:root {
+    --bg-page: #B2D8D0; 
+    --bg-card: #ffffff;
+    --primary: #2D3E4E; 
+    --text: #1a1a1a;
+    --border: #4a4a4a;
+    --error: #b00020;
+    --focus-ring: #FFCC00;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.main-container {
+    background: var(--bg-card);
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+h1 {
+    color: var(--primary);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--bg-page);
+    padding-bottom: 15px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Sistema de Grid/Layout */
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.uf { flex: 0 0 80px; } /* Deixa o campo UF menorzinho */
+
+label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fcfcfc;
+    transition: all 0.2s ease-in-out;
+}
+
+/* === ACESSIBILIDADE E FEEDBACK === */
+
+/* Foco Visível para Teclado */
+input:focus {
+    outline: 3px solid var(--focus-ring);
+    border-color: var(--primary);
+    background-color: #fff;
+}
+
+/* Feedback de Erro de Alto Contraste */
+input:invalid:not(:placeholder-shown) {
+    border: 2px solid var(--error);
+    background-color: #fff8f8;
+}
+
+.required-field {
+    color: var(--error);
+    font-weight: bold;
+}
+
+/* Botão Principal */
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-save {
+    background-color: var(--primary);
+    color: white;
+    padding: 16px 60px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.btn-save:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+.btn-save:active {
+    transform: translateY(0);
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-container {
+        padding: 20px;
+    }
+}
