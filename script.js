@@ -207,3 +207,12 @@ if (!estado.value.trim()) {
     });
   }
 });
+const botao = document.getElementById("btn-menu");
+const menu = document.getElementById("menu");
+
+botao.addEventListener("click", () => {
+  menu.classList.toggle("ativo");
+
+  const aberto = menu.classList.contains("ativo");
+  botao.setAttribute("aria-expanded", aberto);
+});

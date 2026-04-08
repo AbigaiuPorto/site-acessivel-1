@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>Tabela Acessível - Produtos de Beleza</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+  <nav aria-label="Menu principal">
+    
+    <button id="btn-menu" aria-expanded="false">
+      ☰ Menu
+    </button>
+
+    <ul id="menu" class="menu">
+      <li><a href="index.html" aria-current="page">Início</a></li>
+      <li><a href="form.html">Formulário</a></li>
+    </ul>
+
+  </nav>
+</header>
 
   <main id="conteudo-principal" class="container">
     <h1>Tabela Produtos de Beleza</h1>
    
 
-    <section class="caixa-tabela" aria-labelledby="titulo-tabela">
+    <section aria-labelledby="titulo-tabela">
       
-      
+       <h2 id="titulo-tabela">Produtos de Beleza </h2>
 
       <table>
         <caption>

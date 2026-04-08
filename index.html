@@ -3,124 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
+  <title>Exemplo Acessivel de Formulário e Tabela</title>
   <link rel="stylesheet" href="style.css">
-<script src="./script.js"defer></script>
+
 </head>
 <body>
+  <header>
+  <nav aria-label="Menu principal">
+    
+    <button id="btn-menu" aria-expanded="false">
+      ☰ Menu
+    </button>
 
+    <ul id="menu" class="menu">
+      <li><a href="index.html" aria-current="page">Início</a></li>
+      <li><a href="form.html">Formulário</a></li>
+      <li><a href="tabela.html">Tabela</a></li>
+    </ul>
+
+  </nav>
+</header>
 <main>
-  <h1 id="titulo">Cadastro de Cliente</h1>
+  <div class="conteudo-principal">
+    <h1>Exemplo de Site Acessível</h1>
 
-  <form aria-labelledby="titulo">
-
-    <!-- DADOS PESSOAIS -->
-    <fieldset>
-      <legend>Dados Pessoais</legend>
-
-      <label>
-        Nome <span class="required-field">*</span>
-        <input id="nome" type="text">
-        <span id="erro-nome" class="error"></span>
-      </label>
-
-      <p>
-        <label>
-          CPF <span class="required-field">*</span>
-          <input id="cpf" type="text">
-          <span id="erro-cpf" class="error"></span>
-        </label>
-
-        <label>
-          Nascimento <span class="required-field">*</span>
-          <input id="nascimento" type="date">
-          <span id="erro-nascimento" class="error"></span>
-        </label>
-      </p>
-
-      <p>
-        Sexo <span class="required-field">*</span><br>
-
-        <label>
-          <input type="radio" name="sexo" value="masculino"> Masculino
-        </label>
-
-        <label>
-          <input type="radio" name="sexo" value="feminino"> Feminino
-        </label>
-
-      
-
-        <span id="erro-sexo" class="error"></span>
-      </p>
-    </fieldset>
-
-    <!-- CONTATO -->
-    <fieldset>
-      <legend>Contato</legend>
-
-      <p>
-        <label>
-          E-mail <span class="required-field">*</span>
-          <input id="email" type="email">
-          <span id="erro-email" class="error"></span>
-        </label>
-
-        <label>
-          Telefone <span class="required-field">*</span>
-          <input id="telefone" type="tel">
-          <span id="erro-telefone" class="error"></span>
-        </label>
-      </p>
-    </fieldset>
-
-    <!-- ENDEREÇO -->
-    <fieldset>
-      <legend>Endereço</legend>
-
-      <p>
-        <label>
-          CEP <span class="required-field">*</span>
-          <input id="cep" type="text">
-          <span id="erro-cep" class="error"></span>
-        </label>
-
-        <label>
-          Número <span class="required-field">*</span>
-          <input id="numero" type="text">
-          <span id="erro-numero" class="error"></span>
-        </label>
-      </p>
-
-      <label>
-        Rua <span class="required-field">*</span>
-        <input id="rua" type="text">
-        <span id="erro-rua" class="error"></span>
-      </label>
-
-      <p>
-        <label>
-          Cidade <span class="required-field">*</span>
-          <input id="cidade" type="text">
-          <span id="erro-cidade" class="error"></span>
-        </label>
-
-        <label>
-          UF <span class="required-field">*</span>
-          <input id="estado" type="text" maxlength="2">
-          <span id="erro-estado" class="error"></span>
-        </label>
-      </p>
-    </fieldset>
-
-    <!-- BOTÕES (SEM DIV) -->
     <p>
-      <button type="submit">Salvar Cadastro</button>
-      <button type="reset">Limpar Dados</button>
+      Este é um exemplo de site acessível que apresenta uma página de formulário
+      e uma tabela, seguindo boas práticas de HTML semântico e acessibilidade.
     </p>
 
-  </form>
+    <p>
+      Utilize o menu acima para navegar entre as páginas.
+    </p>
+  </div>
 </main>
-
+<script src="script.js"></script>
 </body>
 </html>
