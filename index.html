@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
   <link rel="stylesheet" href="style.css">
+<script src="./script.js"defer></script>
 </head>
 <body>
 
@@ -18,20 +19,39 @@
       <legend>Dados Pessoais</legend>
 
       <label>
-        Nome <span class="required-field" aria-hidden="true">*</span>
-        <input name="nome" type="text" required >
+        Nome <span class="required-field">*</span>
+        <input id="nome" type="text">
+        <span id="erro-nome" class="error"></span>
       </label>
 
       <p>
         <label>
-          CPF <span class="required-field" aria-hidden="true">*</span>
-          <input name="cpf" type="text" required >
+          CPF <span class="required-field">*</span>
+          <input id="cpf" type="text">
+          <span id="erro-cpf" class="error"></span>
         </label>
 
         <label>
-          Nascimento <span class="required-field" aria-hidden="true">*</span>
-          <input name="nascimento" type="date" required >
+          Nascimento <span class="required-field">*</span>
+          <input id="nascimento" type="date">
+          <span id="erro-nascimento" class="error"></span>
         </label>
+      </p>
+
+      <p>
+        Sexo <span class="required-field">*</span><br>
+
+        <label>
+          <input type="radio" name="sexo" value="masculino"> Masculino
+        </label>
+
+        <label>
+          <input type="radio" name="sexo" value="feminino"> Feminino
+        </label>
+
+      
+
+        <span id="erro-sexo" class="error"></span>
       </p>
     </fieldset>
 
@@ -41,13 +61,15 @@
 
       <p>
         <label>
-          E-mail <span class="required-field" aria-hidden="true">*</span>
-          <input name="email" type="email" required >
+          E-mail <span class="required-field">*</span>
+          <input id="email" type="email">
+          <span id="erro-email" class="error"></span>
         </label>
 
         <label>
-          Telefone <span class="required-field" aria-hidden="true">*</span>
-          <input name="telefone" type="tel" required >
+          Telefone <span class="required-field">*</span>
+          <input id="telefone" type="tel">
+          <span id="erro-telefone" class="error"></span>
         </label>
       </p>
     </fieldset>
@@ -58,35 +80,44 @@
 
       <p>
         <label>
-          CEP <span class="required-field" aria-hidden="true">*</span>
-          <input name="cep" type="text" required >
+          CEP <span class="required-field">*</span>
+          <input id="cep" type="text">
+          <span id="erro-cep" class="error"></span>
         </label>
 
         <label>
-          Número <span class="required-field" aria-hidden="true">*</span>
-          <input name="numero" type="text" required >
+          Número <span class="required-field">*</span>
+          <input id="numero" type="text">
+          <span id="erro-numero" class="error"></span>
         </label>
       </p>
 
       <label>
-        Rua <span class="required-field" aria-hidden="true">*</span>
-        <input name="rua" type="text" required >
+        Rua <span class="required-field">*</span>
+        <input id="rua" type="text">
+        <span id="erro-rua" class="error"></span>
       </label>
 
       <p>
         <label>
-          Cidade <span class="required-field" aria-hidden="true">*</span>
-          <input name="cidade" type="text" required >
+          Cidade <span class="required-field">*</span>
+          <input id="cidade" type="text">
+          <span id="erro-cidade" class="error"></span>
         </label>
 
         <label>
-          UF <span class="required-field" aria-hidden="true">*</span>
-          <input name="estado" type="text" maxlength="2" required >
+          UF <span class="required-field">*</span>
+          <input id="estado" type="text" maxlength="2">
+          <span id="erro-estado" class="error"></span>
         </label>
       </p>
     </fieldset>
 
-    <button type="submit">Salvar Cadastro</button>
+    <!-- BOTÕES (SEM DIV) -->
+    <p>
+      <button type="submit">Salvar Cadastro</button>
+      <button type="reset">Limpar Dados</button>
+    </p>
 
   </form>
 </main>
