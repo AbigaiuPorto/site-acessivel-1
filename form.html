@@ -1,89 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
+
 <header>
   <nav aria-label="Menu principal">
-    
-    <button id="btn-menu" aria-expanded="false">
-      ☰ Menu
-    </button>
+    <button id="btn-menu" aria-expanded="false">☰ Menu</button>
 
     <ul id="menu" class="menu">
-      <li><a href="index.html" aria-current="page">Início</a></li>
-      <li><a href="tabela.html">Tabela</a></li>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="form.html" aria-current="page">Formulário</a></li>
+      <li><a href="tabela.html" >Tabela</a></li>
     </ul>
-
   </nav>
+
+  <!-- BOTÕES DE ACESSIBILIDADE -->
+  <div class="acessibilidade">
+  
+<button id="aumentar" aria-label="Aumentar tamanho da fonte">A+</button>
+<button id="diminuir" aria-label="Diminuir tamanho da fonte">A-</button>
+<button id="padrao" aria-label="Voltar fonte para padrão">Fonte Padrão</button>
+  </div>
 </header>
 
-<main>
+<main class="pagina-form">
   <h1 id="titulo">Cadastro de Cliente</h1>
 
-  <form aria-labelledby="titulo">
+  <!-- TEXTO EXPLICATIVO -->
+  <p class="texto-info">
+    Este formulário tem como objetivo coletar informações básicas para cadastro de clientes.
+    Preencha todos os campos corretamente para garantir o envio dos dados.
+  </p>
+<p id="instrucoes-formulario" class="texto-info ">
+    Os campos marcados com * são obrigatórios.
+    Caso algum campo esteja incorreto, uma mensagem de erro será exibida abaixo dele.
+  </p>
+
+  <form aria-labelledby="titulo" aria-describedby="instrucoes-formulario" novalidate>
 
     <!-- DADOS PESSOAIS -->
     <fieldset>
       <legend>Dados Pessoais</legend>
 
-      <label>
-        Nome <span class="required-field">*</span>
-        <input id="nome" type="text">
-        <span id="erro-nome" class="error"></span>
-      </label>
-
       <p>
-        <label>
-          CPF <span class="required-field">*</span>
-          <input id="cpf" type="text">
-          <span id="erro-cpf" class="error"></span>
-        </label>
-
-        <label>
-          Nascimento <span class="required-field">*</span>
-          <input id="nascimento" type="date">
-          <span id="erro-nascimento" class="error"></span>
+        <label for="nome">
+          Nome completo *
+          <input id="nome" type="text" aria-describedby="erro-nome">
+          <span id="erro-nome" class="error" aria-live="polite"></span>
         </label>
       </p>
 
       <p>
-        Sexo <span class="required-field">*</span><br>
+        <label for="cpf">
+          CPF *
+          <input id="cpf" type="text" aria-describedby="erro-cpf">
+          <span id="erro-cpf" class="error" aria-live="polite"></span>
+        </label>
+
+        <label for="nascimento">
+          Data de nascimento *
+          <input id="nascimento" type="date" aria-describedby="erro-nascimento">
+          <span id="erro-nascimento" class="error" aria-live="polite"></span>
+        </label>
+      </p>
+
+      <p>
+        Sexo *<br>
 
         <label>
-          <input type="radio" name="sexo" value="masculino"> Masculino
+          <input type="radio" name="sexo"> Masculino
         </label>
 
         <label>
-          <input type="radio" name="sexo" value="feminino"> Feminino
+          <input type="radio" name="sexo"> Feminino
         </label>
 
-      
-
-        <span id="erro-sexo" class="error"></span>
+        <span id="erro-sexo" class="error" aria-live="polite"></span>
       </p>
     </fieldset>
 
     <!-- CONTATO -->
     <fieldset>
-      <legend>Contato</legend>
+      <legend>Dados de Contato</legend>
 
       <p>
-        <label>
-          E-mail <span class="required-field">*</span>
-          <input id="email" type="email">
-          <span id="erro-email" class="error"></span>
+        <label for="email">
+          E-mail *
+          <input id="email" type="email" aria-describedby="erro-email">
+          <span id="erro-email" class="error" aria-live="polite"></span>
         </label>
 
-        <label>
-          Telefone <span class="required-field">*</span>
-          <input id="telefone" type="tel">
-          <span id="erro-telefone" class="error"></span>
+        <label for="telefone">
+          Telefone com DDD *
+          <input id="telefone" type="tel" aria-describedby="erro-telefone">
+          <span id="erro-telefone" class="error" aria-live="polite"></span>
         </label>
       </p>
     </fieldset>
@@ -93,48 +109,59 @@
       <legend>Endereço</legend>
 
       <p>
-        <label>
-          CEP <span class="required-field">*</span>
-          <input id="cep" type="text">
-          <span id="erro-cep" class="error"></span>
+        <label for="cep">
+          CEP *
+          <input id="cep" type="text" aria-describedby="erro-cep">
+          <span id="erro-cep" class="error" aria-live="polite"></span>
         </label>
 
-        <label>
-          Número <span class="required-field">*</span>
-          <input id="numero" type="text">
-          <span id="erro-numero" class="error"></span>
+        <label for="numero">
+          Número *
+          <input id="numero" type="text" aria-describedby="erro-numero">
+          <span id="erro-numero" class="error" aria-live="polite"></span>
         </label>
       </p>
 
-      <label>
-        Rua <span class="required-field">*</span>
-        <input id="rua" type="text">
-        <span id="erro-rua" class="error"></span>
-      </label>
+      <p>
+        <label for="rua">
+          Rua *
+          <input id="rua" type="text" aria-describedby="erro-rua">
+          <span id="erro-rua" class="error" aria-live="polite"></span>
+        </label>
+      </p>
 
       <p>
-        <label>
-          Cidade <span class="required-field">*</span>
-          <input id="cidade" type="text">
-          <span id="erro-cidade" class="error"></span>
+        <label for="cidade">
+          Cidade *
+          <input id="cidade" type="text" aria-describedby="erro-cidade">
+          <span id="erro-cidade" class="error" aria-live="polite"></span>
         </label>
 
-        <label>
-          UF <span class="required-field">*</span>
-          <input id="estado" type="text" maxlength="2">
-          <span id="erro-estado" class="error"></span>
+        <label for="estado">
+          UF (ex: SP) *
+          <input id="estado" type="text" maxlength="2" aria-describedby="erro-estado">
+          <span id="erro-estado" class="error" aria-live="polite"></span>
         </label>
       </p>
     </fieldset>
 
-    <!-- BOTÕES (SEM DIV) -->
+    <!-- CONFIRMAÇÃO -->
+    <p>
+      <label>
+        <input type="checkbox" id="termos">
+        Confirmo que os dados informados são verdadeiros.
+      </label>
+    </p>
+
+    <!-- BOTÕES -->
     <p>
       <button type="submit">Salvar Cadastro</button>
-      <button type="reset">Limpar Dados</button>
+      <button type="reset">Limpar</button>
     </p>
 
   </form>
 </main>
-<script src=".script.js"></script>
+
+<script src="./script.js" defer></script>
 </body>
 </html>

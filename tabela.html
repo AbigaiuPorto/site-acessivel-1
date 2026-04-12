@@ -1,83 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-  <title>Tabela Acessível - Produtos de Beleza</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela de Produtos</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
+<header>
   <nav aria-label="Menu principal">
-    
-    <button id="btn-menu" aria-expanded="false">
-      ☰ Menu
-    </button>
+    <button id="btn-menu" aria-expanded="false">☰ Menu</button>
 
     <ul id="menu" class="menu">
-      <li><a href="index.html" aria-current="page">Início</a></li>
+      <li><a href="index.html">Início</a></li>
       <li><a href="form.html">Formulário</a></li>
+      <li><a href="tabela.html" aria-current="page">Tabela</a></li>
     </ul>
-
   </nav>
+
+  <!-- BOTÕES DE ACESSIBILIDADE -->
+  <div class="acessibilidade">
+  
+<button id="aumentar" aria-label="Aumentar tamanho da fonte">A+</button>
+<button id="diminuir" aria-label="Diminuir tamanho da fonte">A-</button>
+<button id="padrao" aria-label="Voltar fonte para padrão">Fonte Padrão</button>
+  </div>
 </header>
 
-  <main id="conteudo-principal" class="container">
-    <h1>Tabela Produtos de Beleza</h1>
-   
+<main class="pagina-tabela">
 
-    <section aria-labelledby="titulo-tabela">
-      
-       <h2 id="titulo-tabela">Produtos de Beleza </h2>
+  <h1>Tabela de Produtos</h1>
 
-      <table>
-        <caption>
-          Lista de produtos de beleza com marcas e preços.
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Nome do produto</th>
-            <th scope="col">Marca</th>
-            <th scope="col">Preço</th>
-          </tr>
-        </thead>
-      
-      <tbody>
-  <tr>
-    <th scope="row">Máscara de Hidratação Capilar  </th>
-    <td>Natura</td>
-    <td>R$ 65,00</td>
-  </tr>
-  <tr>
-    <th scope="row">Shampoo Hidratante  </th>
-    <td>O Boticário</td>
-    <td>R$ 50,00</td>
-  </tr>
-  <tr>
-    <th scope="row">Condicionador Nutritivo </th>
-    <td> Natura</td>
-    <td>R$ 55,00</td>
-  </tr>
-  <tr>
-    <th scope="row">Óleo Capilar Reparador  </th>
-    <td>O Boticário</td>
-    <td>R$ 80,00</td>
-  </tr>
-  <tr>
-    <th scope="row">Creme para Pentear  </th>
-    <td>Natura</td>
-    <td>R$ 45,00</td>
-  </tr>
-  <tr>
-    <th scope="row">Leave-in Capilar </th>
-    <td>O Boticário</td>
-    <td>R$ 60,00</td>
-  </tr>
-</tbody>
-      </table>
+  <!-- TEXTO 1 -->
+  <p class="texto-info">
+    Esta tabela apresenta uma relação de produtos de beleza com suas respectivas marcas e preços.
+  </p>
 
-    </section>
-  </main>
+  <!-- TEXTO 2 (DESTAQUE) -->
+  <p id="descricao-tabela" class="texto-info ">
+    Os dados estão organizados em formato tabular para facilitar a leitura, comparação e interpretação das informações.
+  </p>
 
+  <!-- TABELA -->
+   <div class="table-container">
+  <table aria-describedby="descricao-tabela">
+
+    <thead>
+      <tr>
+        <th scope="col">Produto</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Preço</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">Máscara Capilar</th>
+        <td>Natura</td>
+        <td>R$ 65,00</td>
+      </tr>
+
+      <tr>
+        <th scope="row">Shampoo Hidratante</th>
+        <td>O Boticário</td>
+        <td>R$ 50,00</td>
+      </tr>
+
+      <tr>
+        <th scope="row">Condicionador Nutritivo</th>
+        <td>Natura</td>
+        <td>R$ 55,00</td>
+      </tr>
+
+      <tr>
+        <th scope="row">Óleo Capilar</th>
+        <td>O Boticário</td>
+        <td>R$ 80,00</td>
+      </tr>
+
+      <tr>
+        <th scope="row">Creme para Pentear</th>
+        <td>Natura</td>
+        <td>R$ 45,00</td>
+      </tr>
+    </tbody>
+
+  </table>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -216,3 +216,43 @@ botao.addEventListener("click", () => {
   const aberto = menu.classList.contains("ativo");
   botao.setAttribute("aria-expanded", aberto);
 });
+'use strict';
+
+let tamanhoAtual = parseInt(localStorage.getItem("fonte")) || 16;
+
+const tamanhoPadrao = 16;
+const tamanhoMin = 12;
+const tamanhoMax = 24;
+
+function aplicarFonte() {
+  document.documentElement.style.setProperty("--base-font", tamanhoAtual + "px");
+  localStorage.setItem("fonte", tamanhoAtual);
+}
+
+function aumentarFonte() {
+  if (tamanhoAtual < tamanhoMax) {
+    tamanhoAtual += 2;
+    aplicarFonte();
+  }
+}
+
+function diminuirFonte() {
+  if (tamanhoAtual > tamanhoMin) {
+    tamanhoAtual -= 2;
+    aplicarFonte();
+  }
+}
+
+function fontePadrao() {
+  tamanhoAtual = tamanhoPadrao;
+  localStorage.removeItem("fonte");
+  aplicarFonte();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("aumentar")?.addEventListener("click", aumentarFonte);
+  document.getElementById("diminuir")?.addEventListener("click", diminuirFonte);
+  document.getElementById("padrao")?.addEventListener("click", fontePadrao);
+
+  aplicarFonte();
+});

@@ -1,42 +1,96 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo Acessivel de Formulário e Tabela</title>
+  <title>Projeto de Acessibilidade</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
-  <header>
+
+<header>
   <nav aria-label="Menu principal">
-    
-    <button id="btn-menu" aria-expanded="false">
-      ☰ Menu
-    </button>
+    <button id="btn-menu" aria-expanded="false">☰ Menu</button>
 
     <ul id="menu" class="menu">
       <li><a href="index.html" aria-current="page">Início</a></li>
       <li><a href="form.html">Formulário</a></li>
-      <li><a href="tabela.html">Tabela</a></li>
+      <li><a href="tabela.html" >Tabela</a></li>
+    </ul>
+  </nav>
+
+  <!-- BOTÕES DE ACESSIBILIDADE -->
+  <div class="acessibilidade">
+  
+<button id="aumentar" aria-label="Aumentar tamanho da fonte">A+</button>
+<button id="diminuir" aria-label="Diminuir tamanho da fonte">A-</button>
+<button id="padrao" aria-label="Voltar fonte para padrão">Fonte Padrão</button>
+  </div>
+</header>
+
+<main class="pagina-home">
+
+  <!-- HERO -->
+  <section class="card">
+    <h1>Projeto de Acessibilidade Web</h1>
+
+    <p>
+      Este projeto foi desenvolvido como atividade acadêmica com foco em
+      <strong>HTML semântico</strong>, <strong>acessibilidade digital</strong> e
+      <strong>boas práticas de desenvolvimento web</strong>.
+    </p>
+  </section>
+
+  <!-- SOBRE O PROJETO -->
+  <section class="card">
+
+    <h2> Objetivo da atividade</h2>
+
+    <p>
+      Criar um site com estrutura acessível, garantindo que todos os usuários,
+      incluindo pessoas que utilizam leitores de tela, consigam navegar e compreender o conteúdo.
+    </p>
+
+  </section>
+
+  <!-- O QUE FOI FEITO -->
+  <section class="card">
+
+    <h2> O que foi implementado</h2>
+
+    <ul>
+      <li>Estrutura HTML semântica (header, main, section, table)</li>
+      <li>Uso de atributos ARIA para acessibilidade</li>
+      <li>Formulário com validação e mensagens de erro</li>
+      <li>Tabela estruturada com cabeçalhos e scopes</li>
+      <li>Menu responsivo com botão mobile</li>
+      <li>Organização visual com CSS limpo e responsivo</li>
     </ul>
 
-  </nav>
-</header>
-<main>
-  <div class="conteudo-principal">
-    <h1>Exemplo de Site Acessível</h1>
+  </section>
+
+  <!-- ACESSIBILIDADE -->
+  <section class="card destaque">
+
+    <h2>Acessibilidade aplicada</h2>
 
     <p>
-      Este é um exemplo de site acessível que apresenta uma página de formulário
-      e uma tabela, seguindo boas práticas de HTML semântico e acessibilidade.
+      O projeto foi desenvolvido respeitando princípios de acessibilidade,
+      incluindo navegação por teclado, estrutura hierárquica correta e
+      descrição de elementos importantes para leitores de tela.
     </p>
 
+  </section>
+
     <p>
-      Utilize o menu acima para navegar entre as páginas.
+      Utilize o menu acima para navegar entre o formulário e a tabela de dados.
     </p>
-  </div>
+
+
 </main>
+
 <script src="script.js"></script>
 </body>
 </html>
